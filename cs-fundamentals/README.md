@@ -66,16 +66,3 @@ Module-wise compiled PDFs:
   * `CSF.pdf`
 
 ---
-
-## Purpose
-
-*This repository is structured to ensure:
-  
-- Clear separation between official and personal materials
-- Logical module-based grouping
-- Clean chronological documentation
-- Easy navigation and maintainability
-- Professional documentation standards
-- It reflects both the internship experience and my approach to structured learning and organized documentation.
-
----
