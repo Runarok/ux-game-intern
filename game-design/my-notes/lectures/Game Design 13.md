@@ -1,11 +1,3 @@
-Here’s a clean, structured breakdown — no fluff, just what actually matters and what you should retain.
-
-
-
----
-
-
-
 # 1. Core Mindset About Mistakes
 
 
