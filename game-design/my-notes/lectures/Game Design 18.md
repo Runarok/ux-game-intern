@@ -1,468 +1,253 @@
 # 1. Development Priority Shift
 
-
-
 * First phase complete:
 
-
-
-&#x20; * **Minimum Viable Game (MVG)**
+  * **Minimum Viable Game (MVG)**
 
 * Next phase:
 
+  * shift from **function → form**
 
-
-&#x20; * shift from **function → form**
-
-
-
-&#x20;   * visuals
-
-&#x20;   * theme
-
-&#x20;   * narrative
-
-
+    * visuals
+    * theme
+    * narrative
 
 ---
-
-
 
 # 2. Why MVG Comes First
 
-
-
 * Ensures:
 
-
-
-&#x20; * core mechanics work
-
-&#x20; * game is playable
+  * core mechanics work
+  * game is playable
 
 * Prevents:
 
-
-
-&#x20; * wasted effort on aesthetics before validation
+  * wasted effort on aesthetics before validation
 
 * Foundation:
 
-
-
-&#x20; * everything else builds on stable mechanics
-
-
+  * everything else builds on stable mechanics
 
 ---
-
-
 
 # 3. Score System Implementation
 
-
-
 ## 3.1 UI Setup
-
-
 
 * Add:
 
-
-
-&#x20; * `Control node` → score manager
-
-&#x20; * `Label node` → score display
+  * `Control node` → score manager
+  * `Label node` → score display
 
 * Position:
 
-
-
-&#x20; * top of screen (non-intrusive)
-
-
+  * top of screen (non-intrusive)
 
 ---
-
-
 
 ## 3.2 Core Logic
 
-
-
 * Variable:
 
-
-
-&#x20; * `player_score = 0`
+  * `player_score = 0`
 
 * Update triggers:
 
-
-
-&#x20; * enemy defeated → +100
-
-&#x20; * reaching goal → +200
-
-
+  * enemy defeated → +100
+  * reaching goal → +200
 
 ---
-
-
 
 ## 3.3 Display Update
 
-
-
 * Convert score to string before rendering
-
 * Update label dynamically during runtime
 
-
-
 ---
-
-
 
 ## 3.4 Edge Case
 
-
-
 * Repeated scoring exploit:
 
+  * fix using:
 
-
-&#x20; * fix using:
-
-
-
-&#x20;   * boolean flag
-
-&#x20;   * or scene transition immediately
-
-
+    * boolean flag
+    * or scene transition immediately
 
 ---
-
-
 
 # 4. Win Condition System
 
-
-
 * Add:
 
-
-
-&#x20; * `Area node` (win box) on final platform
+  * `Area node` (win box) on final platform
 
 * Detect:
 
-
-
-&#x20; * player entry
+  * player entry
 
 * Actions:
 
-
-
-&#x20; * award points
-
-&#x20; * trigger win state
-
-
+  * award points
+  * trigger win state
 
 ---
-
-
 
 # 5. Leaderboard System Design
 
-
-
 ## 5.1 Data Handling
-
-
 
 * Store:
 
-
-
-&#x20; * username + score
+  * username + score
 
 * Use:
 
-
-
-&#x20; * file system (persistent storage)
-
-&#x20; * dictionary  array for processing
-
-
+  * file system (persistent storage)
+  * dictionary array for processing
 
 ---
-
-
 
 ## 5.2 Workflow
 
-
-
 1. Opencreate score file
-
 2. Append new score
-
 3. Read all entries
-
 4. Sort descending
-
 5. Display top scores
-
 6. Rewrite file (keep top N only, e.g. 10)
 
-
-
 ---
-
-
 
 ## 5.3 Persistence
 
-
-
 * Use:
 
-
-
-&#x20; * **autoload (singleton)**
+  * **autoload (singleton)**
 
 * Purpose:
 
-
-
-&#x20; * share data across scenes
-
-
+  * share data across scenes
 
 ---
-
-
 
 ## 5.4 Input Handling
 
-
-
 * Capture username via:
 
-
-
-&#x20; * `LineEdit node`
+  * `LineEdit node`
 
 * Validate:
 
-
-
-&#x20; * prevent empty submissions
+  * prevent empty submissions
 
 * Use:
 
-
-
-&#x20; * boolean flag (`text_changed`)
-
-
+  * boolean flag (`text_changed`)
 
 ---
-
-
 
 # 6. UI Flow Structure
 
-
-
 * Game Over Scene:
 
-
-
-&#x20; * input username
-
-&#x20; * submit → save score
+  * input username
+  * submit → save score
 
 * Navigation:
 
-
-
-&#x20; * leaderboard button
-
-&#x20; * return to main menu
-
-
+  * leaderboard button
+  * return to main menu
 
 ---
-
-
 
 # 7. Genre vs Theme
 
-
-
 ## 7.1 Genre
-
-
 
 * Defines:
 
-
-
-&#x20; * gameplay structure
-
-&#x20; * mechanics
-
-&#x20; * player interaction
-
-
+  * gameplay structure
+  * mechanics
+  * player interaction
 
 Examples:
 
-
-
 * platformer, RTS, puzzle
 
-
-
 ---
-
-
 
 ## 7.2 Theme
 
-
-
 * Defines:
 
-
-
-&#x20; * setting
-
-&#x20; * visual coherence
-
-&#x20; * narrative tone
-
-
+  * setting
+  * visual coherence
+  * narrative tone
 
 ---
-
-
 
 ## 7.3 Relationship
 
-
-
 * Genre:
 
-
-
-&#x20; * mechanical classification
+  * mechanical classification
 
 * Theme:
 
-
-
-&#x20; * aesthetic + conceptual layer
+  * aesthetic + conceptual layer
 
 * Independent but overlapping
 
-
-
 ---
-
-
 
 # 8. Theme Design Principle
 
-
-
 * Theme must:
 
-
-
-&#x20; * **emerge from mechanics**
+  * **emerge from mechanics**
 
 * Not:
 
-
-
-&#x20; * imposed arbitrarily
-
-
+  * imposed arbitrarily
 
 ---
-
-
 
 # 9. Mechanics → Theme Mapping
 
-
-
 ## Current Mechanics
 
-
-
 * move (walkrun)
-
 * jump
-
-* avoid  defeat enemy
-
+* avoid defeat enemy
 * reach goal
 
-
-
 ---
-
-
 
 ## Interpretation
 
-
-
 * Supports:
 
-
-
-&#x20; * humanoid or robotic entities
+  * humanoid or robotic entities
 
 * Enemy:
 
-
-
-&#x20; * patrolling obstacle
+  * patrolling obstacle
 
 * Example fit:
 
-
-
-&#x20; * robotic  sci-fi environment
-
-
+  * robotic sci-fi environment
 
 ---
 
-
-
 # 10. Narrative Design
-
-
 
 ## 10.1 Types of Narrative
 
-
-
 1. Text-based
 
-
-
-&#x20;  * direct  indirect
+   * direct indirect
 
 2. Cutscenes
 
@@ -472,327 +257,170 @@ Examples:
 
 5. Emergent gameplay narrative
 
-
-
 ---
-
-
 
 ## 10.2 Most Relevant Here
 
-
-
 * Emergent narrative:
 
-
-
-&#x20; * story through player actions
+  * story through player actions
 
 * Supported by:
 
-
-
-&#x20; * theme
-
-&#x20; * assets
-
-&#x20; * feedback
-
-
+  * theme
+  * assets
+  * feedback
 
 ---
-
-
 
 # 11. Narrative Through Mechanics
 
-
-
 * Meaning comes from:
 
-
-
-&#x20; * player interpretation
+  * player interpretation
 
 * Examples:
 
-
-
-&#x20; * jumping → skill
-
-&#x20; * near miss → tension
+  * jumping → skill
+  * near miss → tension
 
 * No explicit story needed if:
 
-
-
-&#x20; * mechanics + theme align
-
-
+  * mechanics + theme align
 
 ---
-
-
 
 # 12. Theme Exploration Examples
 
-
-
 ## 12.1 Valid Theme
-
-
 
 * Robot training simulation:
 
-
-
-&#x20; * player = robot
-
-&#x20; * enemies = obstacles
-
-&#x20; * goal = training objective
-
-
+  * player = robot
+  * enemies = obstacles
+  * goal = training objective
 
 ---
 
-
-
 ## 12.2 Alternative Theme
-
-
 
 * Cat vs robot vacuum
 
 * Shows:
 
-
-
-&#x20; * same mechanics → different interpretation
-
-
+  * same mechanics → different interpretation
 
 ---
-
-
 
 ## 12.3 Rejection Criteria
 
-
-
 * If assets don’t logically align with mechanics
-
 * If narrative feels disconnected
 
-
-
 ---
-
-
 
 # 13. Post-Theme Design Updates
 
-
-
 ## 13.1 Game Design Document
-
-
 
 * Update:
 
-
-
-&#x20; * theme
-
-&#x20; * narrative
-
-&#x20; * visual direction
-
-
+  * theme
+  * narrative
+  * visual direction
 
 ---
-
-
 
 ## 13.2 Mood Board
 
-
-
 * Define:
 
-
-
-&#x20; * colors
-
-&#x20; * textures
-
-&#x20; * atmosphere
-
-
+  * colors
+  * textures
+  * atmosphere
 
 ---
-
-
 
 ## 13.3 Storyboard
 
-
-
 * Decide:
 
-
-
-&#x20; * level-based vs endless
+  * level-based vs endless
 
 * Based on:
 
-
-
-&#x20; * narrative logic
-
-
+  * narrative logic
 
 ---
-
-
 
 # 14. Technical Design Documentation
 
-
-
 * Record:
 
-
-
-&#x20; * mechanics
-
-&#x20; * AI behavior
-
-&#x20; * UI systems
+  * mechanics
+  * AI behavior
+  * UI systems
 
 * Maintain:
 
-
-
-&#x20; * chronological updates
-
-
+  * chronological updates
 
 ---
-
-
 
 # 15. Risk Analysis (New Layer)
 
-
-
 * Asset compatibility
-
 * Theme consistency
-
 * Narrative clarity
-
 * Engine limitations
 
-
-
 ---
-
-
 
 # 16. Scaling Considerations
 
-
-
 * Single level → expand to:
 
-
-
-&#x20; * multiple levels
-
-&#x20; * or endless mode
+  * multiple levels
+  * or endless mode
 
 * Based on:
 
-
-
-&#x20; * gameplay loop
-
-
+  * gameplay loop
 
 ---
-
-
 
 # 17. Development Discipline
 
-
-
 * Do not:
 
-
-
-&#x20; * modify mechanics during theming
+  * modify mechanics during theming
 
 * Only change:
 
-
-
-&#x20; * assets
-
-&#x20; * visuals
-
-&#x20; * presentation
-
-
+  * assets
+  * visuals
+  * presentation
 
 ---
-
-
 
 # 18. Key Design Constraint
 
-
-
 * Mechanics are fixed
-
 * Everything else adapts around them
 
-
-
 ---
-
-
 
 # 19. What to Always Remember
 
-
-
 * Finish functionality before aesthetics
-
 * Theme must justify mechanics, not contradict them
-
 * Narrative can be implicit through gameplay
-
 * Keep systems simple before scaling
-
 * Validate input and edge cases early
-
 * Persistent systems (like leaderboard) need structure, not hacks
-
 * Documentation saves time later
-
 * Every new layer (theme, UI, narrative) introduces new risks
-
 * Avoid changing core mechanics after MVG
-
 * Design decisions should reduce future complexity, not increase it
 
-
-
 ---
-
-
-
-
-

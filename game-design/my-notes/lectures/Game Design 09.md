@@ -21,7 +21,7 @@
   * Community-supported: Rust, Nim, D
 * Cross-platform:
 
-  * PC, consoles, VRAR
+  * PC, consoles, VR/AR
 * Node-based architecture (modular, Git-friendly file structure)
 * Strong community ecosystem (forums, Discord, GitHub, tutorials)
 
@@ -30,7 +30,7 @@
 ### 3. Installation Key Points
 
 * Download **stable version** (avoid experimental builds)
-* Choose correct system architecture (32-bit  64-bit)
+* Choose correct system architecture (32-bit / 64-bit)
 * No installer:
 
   * Extract zip → run executable
@@ -49,7 +49,7 @@
 * Create new project:
 
   * Use clear, descriptive naming
-  * Maintain structured folders (e.g., `GDAU Projectsproject_name`)
+  * Maintain structured folders (e.g., `GDAU Projects/project_name`)
 * Select rendering option (OpenGL ES 3.0)
 * Create & edit project
 
@@ -58,7 +58,7 @@
 ### 5. Interface Structure (Core Panels)
 
 * **Scene Dock** → Manage nodes (most important)
-* **Main Workspace** → Visual editing (2D3D)
+* **Main Workspace** → Visual editing (2D/3D)
 * **Inspector** → Edit properties of selected node
 * **File System** → Project file structure (`res:` root)
 * **Node Dock** → Node relationships & signals
@@ -98,7 +98,7 @@ Bottom panel:
   * Name
   * Editable parameters
   * Can process per frame
-  * Can have parentchild relationships
+  * Can have parent-child relationships
 
 #### Scenes
 
@@ -106,7 +106,7 @@ Bottom panel:
 * Must have:
 
   * Root node
-  * Saveload capability
+  * Save/load capability
   * Instancing (reuse across project)
 
 #### Game Structure
@@ -145,6 +145,7 @@ Bottom panel:
 * Always modularize repeatable elements
 
   * Example: Platform → separate scene
+
 * Benefits:
 
   * Reusability
@@ -175,13 +176,17 @@ Bottom panel:
 
   * CollisionShape → Box
   * MeshInstance → Cube
-* Purpose: Floor  environment
+* Purpose: Floor / environment
+
+---
 
 #### Box (Physics Object)
 
 * Node: RigidBody
 * Affected by gravity
 * Used for testing collisions
+
+---
 
 #### Player (Controlled Object)
 
@@ -201,6 +206,7 @@ Bottom panel:
 
   * X, Z → horizontal
   * Y → vertical
+
 * Transform properties:
 
   * Translate (position)
@@ -232,10 +238,12 @@ Example:
 
   * Immovable
   * Used for environment
+
 * **RigidBody**
 
   * Fully physics-driven
   * Affected by gravity, collisions, forces
+
 * **KinematicBody**
 
   * Script-controlled movement
@@ -246,6 +254,7 @@ Example:
 ### 15. Testing the Scene
 
 * Use **Play Scene** (not full game yet)
+
 * Validate:
 
   * Gravity (box falls)
