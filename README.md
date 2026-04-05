@@ -28,20 +28,21 @@ Additionally, quiz questions from the course have been scraped and structured fo
 
 ## Internship Assignments
 
-**Title:** UX & Game Design Intern
-**Segment:** Master Computer Science Fundamentals
-
 Assignments are organized sequentially (`A01, A02, A03…`) and include:
 
 * **Project Guidelines** – instructions for the assignment
-* **Project Deliverable** – completed submission
+* **Project Assignment** , **Project Activity** - Two Main Deliverables for each assignment
+* any other neccessary deliverables
 
+	
 **File Naming Example:**
 
 * `A01 Project Guidelines.pdf`
-* `A01 Project Deliverable.pdf`
-* `A02 Project Guidelines.pdf`
-* `A02 Project Deliverable.pdf`
+* `A01 Activity.pdf`
+* `A01 Assignment.pdf` ...
+* `A05 Project Guidelines.pdf`
+* `A05 Activity.pdf`
+* `A05 Assignment.pdf` ... so on
 
 This structure ensures clarity, consistency, and easy navigation across all internship work.
 
