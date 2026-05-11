@@ -1,0 +1,27 @@
+\documentclass{article}
+
+% Package to include external PDF files
+\usepackage{pdfpages}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+\newunicodechar{₹}{\textit{(INR)}}
+
+\begin{document}
+
+% =========================
+% Include Cover Page
+% =========================
+% pages=- means include ALL pages of the PDF
+\includepdf[pages=-]{pdf/coverpage.pdf}
+
+% =========================
+% Include Part A
+% =========================
+\includepdf[pages=-]{pdf/part-a.pdf}
+
+% =========================
+% Include Part B 
+% =========================
+\includepdf[pages=-]{pdf/part-b.pdf}
+
+\end{document}

@@ -1,0 +1,143 @@
+\documentclass[12pt,a4paper]{article}
+
+% =========================================================
+%                    PACKAGE IMPORTS
+% =========================================================
+
+% Page layout (margins)
+\usepackage[a4paper,top=10mm,bottom=25mm,left=10mm,right=20mm]{geometry}
+
+% Image handling
+\usepackage{graphicx}
+
+% For double border box
+\usepackage{fancybox}
+
+% For placing elements on every page (used for border/background)
+\usepackage{eso-pic}
+
+% (Duplicate import — harmless but unnecessary)
+\usepackage{graphicx}
+
+% Background image (watermark-like logo)
+\usepackage[pages=some]{background}
+
+% Dummy text (not used currently)
+\usepackage{blindtext}
+
+
+% =========================================================
+%                    PAGE STYLE SETTINGS
+% =========================================================
+
+% Remove default headers and footers (no page number)
+\pagestyle{empty}
+
+
+% =========================================================
+%          CUSTOM PAGE STYLE: DOUBLE BORDER BOX
+% =========================================================
+
+\makeatletter
+\def\ps@myfancypage{%
+  
+  % Disable header/footer content
+  \let\@mkboth\@gobbletwo
+  \def\@oddhead{}%
+  \def\@evenhead{}%
+  \def\@oddfoot{}%
+  \def\@evenfoot{}%
+
+  % Apply double border using fancybox
+  \fancypage{%
+      \setlength{\fboxsep}{5mm} % Controls spacing from edge
+      \doublebox                 % Outer + inner border
+  }{}%
+}
+\makeatother
+
+% Activate the custom page style
+\pagestyle{myfancypage}
+
+
+% =========================================================
+%                BACKGROUND IMAGE SETUP
+% =========================================================
+
+\backgroundsetup{
+  scale=1,
+  angle=0,
+  opacity=0.1,
+  contents={\includegraphics[scale=0.45]{images/brand-logos/vit-logo.png}}
+}
+
+
+% =========================================================
+%                     DOCUMENT START
+% =========================================================
+
+\begin{document}
+
+% =========================================================
+%                    COVER PAGE CONTENT
+% =========================================================
+
+\begin{center}
+
+\vspace{2mm}
+
+% ---------- UNIVERSITY HEADER ----------
+\textbf{\Large VISVESVARAYA TECHNOLOGICAL UNIVERSITY} \vspace{2mm}
+
+\textbf{\large Jnana Sangama, Belagavi - 590018} \vspace{6mm}
+
+% ---------- UNIVERSITY LOGO ----------
+\includegraphics[width=5cm]{images/brand-logos/vtu-logo.png} \\[6mm]
+
+% ---------- REPORT TITLE ----------
+\small{\textit{An Internship Report}} \\[2mm]
+\small{\textit{On}} \\[4mm]
+
+\textbf{\LARGE “UX Design, Game Design Internship”} \\[4mm]
+
+\textcolor{red}{02.02.2026 to 31.05.2026} \\[8mm]
+
+% ---------- DEGREE DETAILS ----------
+\small{\textit{Submitted in partial fulfillment of the requirements for the award of the degree of}} \\[4mm]
+
+\normalsize{\textbf{Bachelor of Engineering}} \\[2mm]
+\normalsize{\textbf{in}} \\[2mm]
+
+\textcolor{blue}{\textbf{Department}} \\[6mm]
+
+\small{Submitted by} \\[5mm]
+
+\begin{tabular}{l c}
+\large NAME & \large USN \\
+\end{tabular}
+
+\vspace{6mm}
+
+% ---------- COLLEGE LOGO ----------
+\includegraphics[width=5cm]{images/brand-logos/vit-logo.png} \\[6mm]
+
+% ---------- COLLEGE DETAILS ----------
+\normalsize \textbf{DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING} \\[3mm]
+
+\large \textbf{VEMANA INSTITUTE OF TECHNOLOGY} \\[2mm]
+
+\normalsize BENGALURU – 560034 \\[8mm]
+
+% ---------- YEAR ----------
+\large \textbf{2025 - 2026}
+\end{center}
+
+
+% =========================================================
+%                     DOCUMENT END
+% =========================================================
+
+
+% ---------- DOCUMENT END ----------
+
+\end{document}

@@ -1,0 +1,265 @@
+\documentclass[15pt,a4paper,twocolumn,fleqn]{article}
+
+% -------------------- PACKAGES --------------------
+\usepackage{graphicx}
+\usepackage[a4paper,top=10mm,bottom=25mm,left=10mm,right=20mm]{geometry}
+\usepackage{fancybox}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\usepackage[pages=some]{background}
+
+% -------------------- DOUBLE BORDER --------------------
+\makeatletter
+\def\ps@myfancypage{%
+  \let\@mkboth\@gobbletwo
+  \def\@oddhead{}%
+  \def\@evenhead{}%
+  \def\@oddfoot{}%
+  \def\@evenfoot{}%
+  \fancypage{%
+      \setlength{\fboxsep}{14.2pt}\doublebox % 0.5 cm
+  }{}%
+}
+\makeatother
+
+% -------------------- PAGE NUMBER STYLE --------------------
+\fancypagestyle{numbered}{
+    \fancyhf{}
+    \fancyfoot[C]{\thepage} % centered page number
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+% -------------------- BACKGROUND IMAGE --------------------
+\backgroundsetup{
+  scale=1,
+  angle=0,
+  opacity=0.1,
+  contents={\includegraphics[scale=0.45]{images/brand-logos/vit-logo.png}}
+}
+
+% ==================== DOCUMENT ====================
+\begin{document}
+
+% ---------- FIRST PAGE (NO NUMBER, ONLY BORDER) ----------
+\pagestyle{myfancypage}
+\thispagestyle{myfancypage}
+\BgThispage
+
+\onecolumn
+
+\begin{center}
+{\Large \textbf{Karnataka ReddyJana Sangha}}\\[5mm]
+
+{\Large \textbf{VEMANA INSTITUTE OF TECHNOLOGY}}\\[3mm]
+{\large (Affiliated to Visvesvaraya Technological University, Belagavi)}\\[2mm]
+{\large Koramangala, Bengaluru–560034}\\[0.8cm]
+
+\includegraphics[scale=50]{images/brand-logos/vit-dept-logo.png} \\[0.4cm]
+
+{\large \textbf{DEPARTMENT OF}}\\[3mm]
+{\large \textbf{ELECTRONICS AND COMMUNICATION ENGINEERING}}\\[0.5cm]
+
+{\Large \textbf{CERTIFICATE}}\\[0.7cm]
+\end{center}
+
+{\Large
+This is to certify that the internship entitled \textbf{“UX Design, Game Design Internship”} is a bonafide work carried out by \textbf{NAME (USN)} in partial fulfilment of the requirements for the award of Bachelor of Engineering degree in \textbf{Department}, Visvesvaraya Technological University, Belagavi, during the academic year 2025-2026.}
+
+\vspace{0.25cm}
+
+{\Large
+It is certified that all corrections and suggestions indicated for internal assessment have been duly incorporated in the report. The internship report has been approved as it satisfies the academic requirements prescribed for the said degree.
+}
+
+\vspace{1.5cm}
+
+\begin{center}
+\begin{tabular}{c c c c}
+\textbf{Internal Supervisor} & \textbf{External Supervisor} & \textbf{HOD} & \textbf{Principal} \\
+(Name) & (Edutainer\ Team) & (Name) & (Dr.\ Vijayasimha Reddy B G)
+\end{tabular}
+\end{center}
+
+\vspace{8mm}
+
+\noindent
+\begin{tabular}{p{9cm} p{6.5cm}}
+\textbf{Name of the Examiners} & \textbf{Signature with Date} \\[5mm]
+
+1.\ \rule{7.5cm}{0.4pt} & \rule{5.5cm}{0.4pt} \\[8mm]
+
+2.\ \rule{7.5cm}{0.4pt} & \rule{5.5cm}{0.4pt} \\
+\end{tabular}
+
+
+% ---------- 2nd Page (Certificate) ----------
+\newpage
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\thispagestyle{myfancypage}
+\thispagestyle{numbered}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=7.5cm]{images/certificate.png}
+\end{figure}
+
+% ---------- THIRD PAGE (ACKNOWLEDGEMENT) ----------
+\newpage
+
+\thispagestyle{myfancypage}
+\thispagestyle{numbered}
+
+\begin{center}
+{\LARGE \textbf{ACKNOWLEDGEMENT}}\\[1cm]
+\end{center}
+
+\setstretch{2}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{15pt}
+
+{\large
+
+I sincerely thank \textbf{Visvesvaraya Technological University (VTU)} for providing me with the opportunity to undertake this internship as a part of the academic curriculum, which has contributed significantly to my learning and overall development.
+
+I express my sincere gratitude to \textbf{Name}, Principal, Vemana Institute of Technology, Bengaluru, for providing the necessary infrastructure, encouragement, and support to successfully carry out the internship work.
+
+I extend my heartfelt thanks to \textbf{Name}, Head of the Department, \textbf{Department Name}, Vemana Institute of Technology, for her constant guidance, motivation, and encouragement throughout the internship duration.
+
+I would also like to thank Internal Supervisor \textbf{Name},External Supervisor \textbf{Edutainer Team}, and Internship Coordinators \textbf{Name}, \textbf{Name} for their cooperation, coordination, and support during the internship period.
+
+I am thankful to all the teaching and non-teaching staff members of the Department of Electronics and Communication Engineering for their support and encouragement throughout the internship.
+
+I also acknowledge the support of the Edutainer platform for providing structured learning resources and an environment that encouraged systematic understanding, practical application, and continuous improvement.
+}
+
+\vspace{0.7cm}
+
+{\Large
+\begin{flushright}
+\textbf{Name}\\
+USN
+\end{flushright}
+}
+
+% ---------- FOURTH PAGE (ABSTRACT) ----------
+
+\newpage
+
+\thispagestyle{myfancypage}
+\thispagestyle{numbered}
+
+\begin{center}
+{\LARGE \textbf{ABSTRACT}}\\[1cm]
+\end{center}
+
+\setstretch{2}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{15pt}
+
+{\large
+The Edutainer UX Designer/Game Designer internship provided a controlled learning environment that integrated computer science and interactive design concepts. The curriculum prioritized conceptual clarity, logical reasoning, and practical application over memorization.
+I used iterative practice to convert the assignments. It also introduced ideas related to game design and user experience, such as gamification, usability, interface design, and user flow.
+In order to turn unstructured data into organised information, transcription tools and AI-assisted refining techniques were essential. Tasks, resources, and notes were arranged using GitHub. In order to improve clarity and visual communication, the internship work also concentrated on documentation and presentation. Converted the instructional materials into useful PDF booklets, except for the later half of the course.
+}
+
+%--------------------------------- TABLE OF CONTENTS ---------------------------------
+\newpage
+\thispagestyle{numbered}
+
+\begin{center}
+{\Large \textbf{TABLE OF CONTENTS}}\\[0.4cm]
+\end{center}
+
+\renewcommand{\arraystretch}{1.1}
+\setlength{\tabcolsep}{4pt}
+
+% ---------- PAGE 1 ----------
+\begin{center}
+\begin{tabular}{p{3.5cm} p{9cm} p{2.5cm}}
+\textbf{Chapter} & \textbf{Title} & \textbf{Page No} \\
+\hline
+
+& Certificate & i \\
+& Acknowledgement & ii \\
+& Abstract & iii \\
+& Table of Contents & iv \\
+& List of Figures & vi \\
+
+\textbf{1} & \textbf{INTRODUCTION} & 1-2 \\
+& 1.1 Internship Scope and Objectives & 1 \\
+& 1.2 Relevance of UX and Game Design & 1 \\
+& 1.3 Evolution of UX and Game Design Practices & 2 \\
+& 1.4 Current Trends and Technologies & 2 \\
+
+\textbf{2} & \textbf{ORGANISATION PROFILE} & 3-4 \\
+& 2.1 Introduction & 3 \\
+& 2.2 Vision and Mission of the Organization & 3 \\
+& 2.3 Programs and Services Offered & 5 \\
+& 2.4 Organizational Impact and Reach & 3 \\
+& 2.5 Core Values & 4 \\
+
+\textbf{3} & \textbf{WORK DONE / METHODOLOGY} & 5-9 \\
+& 3.1 Overview of Internship Work & 5 \\
+& 3.2 Tools and Technologies Used & 5 \\
+& 3.3 Design Process & 6 \\
+& 3.4 Game Design Analysis and Case Study & 7 \\
+& 3.5 Challenges Faced & 9 \\
+& 3.6 Solutions Implemented & 9 \\
+\end{tabular}
+\end{center}
+
+\newpage
+
+% ---------- PAGE 2 (BREAK STARTS FROM 4) ----------
+\thispagestyle{numbered}
+\begin{center}
+\begin{tabular}{p{3.5cm} p{9cm} p{2.5cm}}
+
+\textbf{4} & \textbf{RESULTS AND DISCUSSION} & 10-11 \\
+& 4.1 Outcomes of the Work & 10 \\
+& 4.2 Learning Outcomes & 10 \\
+& 4.3 Analysis & 11 \\
+
+\textbf{5} & \textbf{CONCLUSION} & 12-13 \\
+& 5.1 Summary & 12 \\
+& 5.2 Personal Growth & 12 \\
+& 5.3 Future Scope & 12 \\
+
+\end{tabular}
+\end{center}
+
+%--------------------------------- LIST OF FIGURES ---------------------------------
+
+\newpage
+\thispagestyle{numbered}
+\begin{center}
+{\Large \textbf{LIST OF FIGURES}}\\[0.4cm]
+\end{center}
+
+\renewcommand{\arraystretch}{1.1}
+\setlength{\tabcolsep}{4pt}
+
+\begin{center}
+\begin{tabular}{p{3.5cm} p{9cm} p{2.5cm}}
+\textbf{Figure No} & \textbf{Title} & \textbf{Page No} \\
+\hline
+
+1 & Internship Provider - Edutainer Logo & 3 \\
+2 & Internship Overview & 4 \\
+3 & Internship Workflow Cycle & 6 \\
+4 & Tools and Technologies Used & 6 \\
+5 & Overview of Internship Work & 7 \\
+6 & Brewing System and Combination Mechanics & 8 \\
+7 & Results & 10 \\
+8 & Conclusion & 12 \\
+
+\end{tabular}
+\end{center}
+\end{document}  
