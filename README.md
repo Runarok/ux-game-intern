@@ -47,3 +47,23 @@ Assignments are organized sequentially (`A01, A02, A03…`) and include:
 This structure ensures clarity, consistency, and easy navigation across all internship work.
 
 ---
+
+## Appendix — Additional Internship Repositories
+
+The following repositories contain supplementary internship-related materials that were kept separate from the main UX & Game Design internship archive due to differing subject focus or structure.
+
+### Data Analytics Internship
+
+A separate repository dedicated to a bonus internship module that felt significantly outside the primary UX/Game Design learning path.
+This repository currently contains only the official learning notes and reference material.
+
+* [Data Analytics Internship Repository](https://github.com/Runarok/data-analytics-intern?utm_source=chatgpt.com)
+
+### Graphic Design Internship
+
+This repository archives materials from a friend’s Graphic Design internship program.
+It includes assignment submissions and official notes, serving primarily as a reference collection.
+
+* [Graphic Design Internship Repository](https://github.com/Runarok/graphic-design-intern?utm_source=chatgpt.com)
+
+---
